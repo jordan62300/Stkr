@@ -1,0 +1,90 @@
+body{
+    background: #3E92CC;
+}
+
+
+.container-list{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.form-container{
+    padding:20px
+}
+
+.btn-search{
+    background-color: #3E92CC;
+}
+
+.list-items{
+    
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #3E92CC;
+}
+
+.items {
+    background-color: #2c3e50;
+    margin: 1%;
+    text-align: center;
+    padding:15px;
+    border-radius: 19px;
+    height: auto;
+    width: 30%;
+    color: #FFFAFF;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.container-info {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 3%;
+}
+.container-info p {
+    margin-left: 3%;
+}
+
+.container-info.mail p , .container-info.tel p{
+    border-bottom: solid 1px #3E92CC;
+  
+
+}
+
+a {
+    color:#FFFAFF;;
+}
+
+span {
+
+}
+
+.statut::after {
+    content:'';
+    display: block;
+    position: relative;
+    left: 35%;
+    background-color: #FFFAFF;
+    color: white;
+    width: 30%;
+    height: 2px;
+}
+
+.fab {
+    font-size: 40px;
+    color:#3E92CC;
+}
+
+.btn{
+    font-size: 18px;
+}
+
+.btn-delete {
+    margin-left: 1%;
+}
+

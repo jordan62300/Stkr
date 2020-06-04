@@ -1,0 +1,108 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="../css/edit.css">
+
+{% endblock %}
+
+{% block body %}
+	<div class="container-all">
+		<div class="container-list">
+			<div class="list-items">
+				<div class="items">
+
+					{% if humain.statut %}
+						<h1 class="statut">{{ humain.statut }}</h1>
+					{% endif %}
+					{% if humain.prenom %}
+						<div class="container-info prenom">
+							<span>
+								Prenom :
+							</span>
+							<p>
+								{{ humain.prenom }}
+							</p>
+						</div>
+					{% endif %}
+					{% if humain.nom %}
+						<div class="container-info nom">
+							<span>
+								nom :
+							</span>
+							<p>
+								{{ humain.nom }}
+							</p>
+						</div>
+					{% endif %}
+					{% if humain.mail %}
+						<div class="container-info mail">
+							<span>
+								mail :
+							</span>
+							<p>
+								{{ humain.mail }}
+							</p>
+						</div>
+					{% endif %}
+					{% if humain.facebook %}
+						<div class="container-info facebook">
+							<a href="{{ humain.facebook}}">
+								<i class="fab fa-facebook"></i>
+							</a>
+						</div>
+					{% endif %}
+					{% if humain.twitter %}
+						<div class="container-info twitter">
+							<a href="{{ humain.twitter }}">
+								<i class="fab fa-twitter-square"></i>
+							</a>
+						</div>
+					{% endif %}
+					{% if humain.insta %}
+						<div class="container-info insta">
+							<a href="{{ humain.insta }}">
+								<i class="fab fa-instagram-square"></i>
+							</a>
+						</div>
+					{% endif %}
+					{% if humain.linkedin %}
+						<div class="container-info linknd">
+							<a href="{{ humain.linkedin }}">
+								<i class="fab fa-linkedin"></i>
+							</a>
+						</div>
+					{% endif %}
+					{% if humain.telephone %}
+						<div class="container-info tel">
+							<span>
+								telephone :
+							</span>
+							<p>
+								{{ humain.telephone }}
+							</p>
+						</div>
+					{% endif %}
+					{% if humain.inscrit %}
+						<h3 class="container-info inscrit">
+							Inscrit
+						</h3>
+					{% else %}
+
+						<h3 class="container-info inscrit">
+							Pas inscrit
+						</h3>
+
+					{% endif %}
+
+				</div>
+			</div>
+		</div>
+		<div class="container-form">
+			{{ form_start(formHumain)}}
+
+			{{form_widget(formHumain)}}
+
+			{{ form_end(formHumain)}}
+		</div>
+	</div>
+{% endblock %}

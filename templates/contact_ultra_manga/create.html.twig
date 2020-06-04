@@ -1,0 +1,17 @@
+{%  extends "base.html.twig" %}
+
+{% form_theme formHumain 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+	<div class="container">
+
+        <h1 class="text-center primary">Ajouter une personne</h1>
+
+		{{ form_start(formHumain)}}
+
+		{{form_widget(formHumain)}}
+
+		{{ form_end(formHumain)}}
+
+	</div>
+{% endblock %}

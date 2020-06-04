@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Welcome!
+			{% endblock %}
+		</title>
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../fontawesome/css/all.css"> {% block stylesheets %}{% endblock %}
+		</head>
+		<body>
+			{% if app.user %}
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="{{ path('home') }}">UltraStalker</a>
+					</div>
+
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li class="">
+								<a href="{{ path('home') }}">Liste
+
+								</a>
+							</li>
+							<li>
+								<a href="{{ path('add')}}">Ajouter a la liste</a>
+							</li>
+							{% if  app.user %}
+								<li class="nav-item">
+									<a href="{{ path('security_logout')}}" class="nav-link">Deconnexion</a>
+								</li>
+							{% endif %}
+						</ul>
+					</div>
+				</div>
+			</nav>
+			{% endif %}
+			{% block body %}{% endblock %}
+			{% block javascripts %}{% endblock %}
+		</body>
+	</html>
